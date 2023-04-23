@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans';
+}
+
+:root{
+    /*Primery Colors*/
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+
+    /*Neutral*/
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+
+    /*Fonts*/
+    --title: 300;
+}
+
+/* NAV */
+
+#menu{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+#logo{
+    padding: 1.5em;
+}
+
+#btn1{
+    display: none;
+}
+
+#icon-hamburger{
+    display: block;
+    padding: 1.6em 1.5em;
+}
+
+#icon-close{
+    display: none;
+    padding: 1.4em 1.5em;
+}
+
+#menu-content{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    top: 5.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0px;
+    display: block;
+    margin: auto;
+    z-index: 2;
+    background-color: white;
+    border-radius: .5em;
+    overflow: hidden;
+    transition: height .25s ease-in;
+}
+
+#menu-content li{
+    padding: 1em 8em;
+    z-index: 2;
+    text-align: center;
+}
+
+
+/* HEADER */
+
+#top{
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+#top-background{
+    height: 20.7em;
+    width: 100%;
+    margin: auto;
+    background-image: url(/images/bg-intro-mobile.svg);
+    transform: translateY(-4.1vh);
+    background-position: center;
+    background-size: cover;
+}
+
+#top-background-img{
+    height: 25em;
+    width: 320px;
+    display: block;
+    transform: translateY(-13.4vh);
+    margin: auto;
+}
+
+h1{
+    width: 300px;
+    margin: auto;
+    transform: translateY(-.9em);
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 2em;
+    margin-bottom: .7em;
+}
+
+#information-about h3{
+    padding: 1.2em;
+}
+
+h1, h2, h3, h4{
+    font-weight: var(--title);
+    color: var(--darkBlue);
+}
+
+p{
+    color: var(--grayishBlue);
+    line-height: 1.5em;
+    font-size: .9em;
+}
+
+.request-invited{
+    padding: .8em 2em;
+    border-radius: 2em;
+    background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    color: white; 
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.6em;
+    font-weight: 700;
+}
+
+#top-apresentation-p{
+    transform: translateY(-1em);
+    padding: 0 1.2em;
+}
+
+/* MAIN */
+
+#information{
+    text-align: center;
+}
+
+#information-about{
+    background-color: var(--lightGrayishBlue);
+    padding: 4em 2em 2em 2em;
+}
+
+#why-choose-easybank p{
+    margin-bottom: 2em;
+}
+
+#information p{
+    padding-bottom: 2em;
+}
+
+#information-articles{
+    padding: 4em 2em 2em 2em;
+    text-align: left;
+}
+
+.article-img{
+    max-width: 340px;
+    width: 100%;
+    height: 180px;
+    border-radius: .3em;
+    display: block;
+    margin: auto;
+}
+
+#information-articles h2{
+    text-align: center;
+}
+
+#information-articles h3{
+    padding: 0em 35px;
+}
+
+#information-articles span{
+    font-size: .7em;
+    color: var(--grayishBlue);
+    padding: 2em  0 1em 35px;
+    display: inline-block;
+}
+
+#information-articles p{
+    padding: 1em 35px 2em 35px;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: var(--darkBlue);
+    padding: 2em 0;
+    text-align: center;
+    color: white;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#socials-network{
+    padding: 1em 0;
+}
+
+#socials-network li{
+    display: inline-block;
+    list-style: none;
+    padding: .5em;
+}
+
+#socials-network img{
+    width: 1.5em;
+}
+
+#adress li{
+    padding: .5em;
+}
+
+#copyright{
+    margin: 2em 0;
+}
+
+.attribution a{
+    color: var(--limeGreen);
+}
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 1000px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* MENU */
+    #icon-hamburger{
+        display: none;
+    }
+
+    #btn1{
+        display: block;
+    }
+
+    #menu{
+        padding: .7em 6em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: white;
+        z-index: 3;
+    }
+
+    #logo{
+        padding: 0;
+    }
+
+    #menu img{
+        width: 9em;
+        height: 1.5em;
+        align-self: center;
+    }
+
+    #menu-content{
+        transform: none;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menu-content li{
+        padding: 0 1em;
+    }
+
+    #menu .request-invited{
+        margin: 0;
+        padding: 13px 32px;
+        max-height: 173px;
+        vertical-align: center;
+    }
+
+    /* HEADER */
+
+    #top{
+        height: 70vh;
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+        overflow:visible;
+    }
+
+    #top-apresentation{
+        transform: none;
+        width: 45%;
+    }
+
+    #top-background-img{
+        transform: none;
+        /*width: 541px;*/
+        width: 480px;
+        /*height: 700px;*/
+        height: 640px;
+        z-index: 2;
+    }
+
+    #btn2{
+
+    }
+
+    #top-apresentation-p{
+        width: 360px;
+        padding: 0;
+    }
+
+ 
+
+    #top-apresentation-desktop{
+        width: 360px;
+        margin: 5em auto 0 auto;
+    }
+
+    h1{
+        transform: none;
+        margin: 3em 0 .8em 0;
+    }
+
+    #top-background{
+        margin: 0;
+        width: 55%;
+        height: auto;
+        transform: translate(4em, -6em);
+        background-image: url(/images/bg-intro-desktop.svg);
+    }
+
+    /* MAIN */
+
+    #information-about{
+        padding: 4em 4em 2em 4em;
+    }
+
+    #information-about h3{
+        padding: 1em 0;
+    }
+
+    #information-about-desktop{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-around;
+    }
+
+    #information-about-desktop p{
+        width: 210px;
+    }
+
+    #why-choose-easybank{
+        width: 55%;
+        text-align: left;
+    }
+
+    #information-articles-title{
+        display: inline-block;
+    }
+
+    #information-articles article{
+        width: 239px;
+    }
+
+    #information-articles-desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #information-articles h2{
+        text-align: center;
+    }
+    
+    #information-articles h3{
+        padding: 0em 20px;
+    }
+    
+    #information-articles span{
+        padding: 2em  0 1em 20px;
+    }
+
+    #information-articles p{
+        padding: 1em 35px 2em 20px;
+    }
+
+    #information-articles img{
+        width: 239px;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    #menu{
+        padding: .9em 6em;
+    }
+}
