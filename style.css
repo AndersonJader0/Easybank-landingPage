@@ -5,6 +5,10 @@
     font-family: 'Public Sans';
 }
 
+html{
+    overflow-x: hidden;
+}
+
 :root{
     /*Primery Colors*/
     --darkBlue: hsl(233, 26%, 24%);
@@ -222,7 +226,7 @@ footer a{
     width: 1.5em;
 }
 
-#adress li{
+.adress li{
     padding: .5em;
 }
 
@@ -249,10 +253,11 @@ footer a{
 
     #btn1{
         display: block;
+        width: 174px;
     }
 
     #menu{
-        padding: .7em 6em;
+        padding: .7em 4em .7em 4em;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -303,20 +308,16 @@ footer a{
 
     #top-apresentation{
         transform: none;
-        width: 45%;
+        width: 40%;
     }
 
     #top-background-img{
         transform: none;
         /*width: 541px;*/
-        width: 480px;
+        width: 540px;
         /*height: 700px;*/
-        height: 640px;
+        height: 700px;
         z-index: 2;
-    }
-
-    #btn2{
-
     }
 
     #top-apresentation-p{
@@ -324,11 +325,9 @@ footer a{
         padding: 0;
     }
 
- 
-
     #top-apresentation-desktop{
         width: 360px;
-        margin: 5em auto 0 auto;
+        margin: 5em 0 0 30%;
     }
 
     h1{
@@ -337,10 +336,10 @@ footer a{
     }
 
     #top-background{
-        margin: 0;
-        width: 55%;
         height: auto;
-        transform: translate(4em, -6em);
+        margin: 0;
+        width: 70%;
+        transform: translate(8em, -6em);
         background-image: url(/images/bg-intro-desktop.svg);
     }
 
@@ -368,6 +367,7 @@ footer a{
     #why-choose-easybank{
         width: 55%;
         text-align: left;
+        margin-left: 2%;
     }
 
     #information-articles-title{
@@ -404,10 +404,73 @@ footer a{
         width: 239px;
     }
 
+    /* FOOTER */
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .adress{
+        list-style: none;
+    }
+
+    #copyright{
+        display: none;
+    }
+
+    .attribution{
+        margin-top: 1em;
+    }
+
+    #socials-network{
+        margin-top: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1120px){
+    #why-choose-easybank{
+        margin-left: 4%;
+    }
+    #information-articles-title{
+        margin-left: 4%;
+    }
+    
 }
 
 @media screen and (min-width: 1200px){
     #menu{
         padding: .9em 6em;
+    }
+}
+
+@media screen and (min-width: 1250px){
+    #top-background{
+        height: auto;
+        margin: 0;
+        width: 100%;
+        transform: translate(14em, -6em);
+        background-image: url(/images/bg-intro-desktop.svg);
+    }
+}
+
+@media screen and (min-width: 1350px){
+    #top-background{
+        height: auto;
+        margin: 0;
+        width: 100%;
+        transform: translate(20em, -3em);
+        background-image: url(/images/bg-intro-desktop.svg);
+    }
+
+    #top-background-img{
+        width: 600px;
+        height: 760px;
+        transform: translate(-1em, -5em);
+    }
+
+    #top-apresentation{
+        transform: translateX(4em);
     }
 }
